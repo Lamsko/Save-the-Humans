@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Save_the_Humans"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="Save the Humans" Height="350" Width="1000">
+	<Grid>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="140"/>
+			<ColumnDefinition/>
+			<ColumnDefinition Width="160"/>
+		</Grid.ColumnDefinitions>
+		<Grid.RowDefinitions>
+			<RowDefinition/>
+			<RowDefinition Height="150"/>
+		</Grid.RowDefinitions>
+		<Button x:Name="startButton" Content="Start!" HorizontalAlignment="Center" Grid.Row="1" VerticalAlignment="Center"/>
+		<StackPanel Grid.Column="2" Orientation="Vertical" Grid.Row="1">
+			<TextBlock TextWrapping="Wrap" Text="Avoid these" FontSize="18"/>
+			<ContentControl Content="ContentControl" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+		</StackPanel>
+		<ProgressBar Grid.Column="1" HorizontalAlignment="Left" Height="10" Margin="105,96,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
+		<Canvas Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="170,130,0,0" VerticalAlignment="Top" Width="100"/>
+
+	</Grid>
 </Window>
